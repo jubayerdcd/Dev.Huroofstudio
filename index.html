@@ -1,46 +1,912 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Huroofstudio - A modern web experience">
-    <title>Huroofstudio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">Dev.Huroofstudio</div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact" class="btn-primary">Contact Us</a>
-            </nav>
-        </header>
-        
-        <main>
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>Welcome to <span class="highlight">Huroofstudio</span></h1>
-                    <p>We craft digital experiences that are visually stunning, deeply engaging, and highly performant.</p>
-                    <div class="cta-group">
-                        <button class="btn-primary">Get Started</button>
-                        <button class="btn-secondary">Learn More</button>
-                    </div>
-                </div>
-                <div class="hero-graphics">
-                    <div class="glass-card">
-                        <div class="card-circle"></div>
-                        <div class="card-circle small"></div>
-                        <h3>Creative Solutions</h3>
-                        <p>Building the future of web design.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Huroof Studio | Creative Design, AI Workflows & Arabic Calligraphy Branding</title>
+    <meta name="description" content="Huroof Studio is a premium creative agency bridging digital craft and automated operations. Serving UAE, KSA, Qatar, USA, UK & Canada."/>
     
+    <!-- Scripts & Stylesheets -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="index.css"/>
+    
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "bg-zinc": "#09090b",
+                        "surface": "#12131a",
+                        "surface-card": "#0b0f19",
+                        "surface-container": "#18181b",
+                        "outline-variant": "rgba(255,255,255,0.08)",
+                        "primary": "#6366f1", /* Indigo */
+                        "secondary": "#a855f7", /* Purple */
+                        "tertiary": "#0d9488", /* Teal */
+                        "text-glow": "#f3f4f6",
+                        "text-cyber": "#9ca3af",
+                        "on-surface-variant": "#c7c4d7",
+                        "on-surface": "#e3e1ec"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bg-zinc text-on-surface font-body-md selection:bg-primary/30">
+
+    <!-- Sticky Header Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="flex justify-between items-center h-20 px-6 md:px-12 max-w-container-max mx-auto">
+            <!-- Brand Logo -->
+            <a class="flex items-center gap-3 group" href="#hero">
+                <svg class="huroof-logo w-auto h-8 md:h-10 transition-transform duration-300 group-hover:scale-105" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424.5 208.04">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                        <g>
+                            <g>
+                                <path class="cls-1" d="M84.12,6.6c0-2.49.89-4.7,2.06-6.6h-18.94c1.32,2.05,2.2,4.26,2.2,7.04v39.35H16.88V6.6c0-2.49.88-4.7,2.06-6.6H0c1.32,2.05,2.2,4.26,2.2,7.04v90c0,2.65-.88,5.15-2.2,7.05h18.94c-1.18-1.9-2.06-4.11-2.06-6.75v-45.51h52.56v45.4c4.78,1.89,8.69,4.31,11.93,6.86h4.81c-1.17-1.9-2.06-4.11-2.06-6.75V6.6ZM67.82,103.15c-.18.33-.37.64-.58.94h2.69c-.69-.33-1.39-.65-2.11-.94Z"/>
+                                <path class="cls-1" d="M163.85,95.87v-60.63h-18.2c2.5,2.49,4.4,4.84,4.4,8.66v30.97c0,22.47-13.95,29.37-22.02,29.37-9.99,0-10.86-10.72-10.86-19.97v-49.03h-18.21c2.2,1.61,4.4,4.1,4.4,7.48v37.44c0,15.56,4.85,27.6,25.26,27.6,12.62,0,21.73-13.06,21.73-19.23v5.29c0,6.89,4.69,11.59,11.59,11.59h6.32c-4.11-3.08-4.41-7.48-4.41-9.54Z"/>
+                                <path class="cls-1" d="M218.14,33.77c-7.35,0-16.89,3.96-21.58,17.76,0-8.22,0-16.29-9.55-16.29h-7.34c1.47,1.46,3.82,4.1,3.82,8.07v54.18c0,3.22-1.03,5.87-2.35,8.07h18.94c-1.47-2.35-2.79-5.14-2.79-8.52v-34.93c0-13.22,7.49-20.42,14.39-20.42,4.26,0,8.66,2.8,11.01,7.2v-14.68c-.74-.15-2.64-.44-4.55-.44Z"/>
+                                <path class="cls-1" d="M264,32.74c-21.14,0-36.12,16-36.12,37.44s14.98,37.58,36.12,37.58c2.74,0,5.37-.27,7.88-.78.36-1.06.83-2.05,1.38-2.98-.57.06-1.16.09-1.77.09-19.24,0-32.45-28.92-32.45-45.95,0-11.31,5.87-21.73,17.47-21.73,19.23,0,32.45,28.92,32.45,45.95,0,5.05-1.17,9.91-3.49,13.75.94-.13,1.91-.2,2.91-.2h2.65c5.75-6.6,9.08-15.54,9.08-25.73,0-21.44-14.97-37.44-36.11-37.44Z"/>
+                                <path class="cls-1" d="M346.6,32.74c-21.15,0-36.13,16-36.13,37.44s14.98,37.58,36.13,37.58,36.11-16,36.11-37.58-14.97-37.44-36.11-37.44ZM354.08,104.09c-19.23,0-32.45-28.92-32.45-45.95,0-11.31,5.88-21.73,17.48-21.73,19.23,0,32.44,28.92,32.44,45.95,0,11.31-5.87,21.73-17.47,21.73Z"/>
+                                <path class="cls-1" d="M424.35,19.52c-.88-7.04-6.02-12.33-12.33-12.33-13.66,0-20.85,7.34-20.85,20.12v8.07h-9.4v3.24h9.4v59.16c0,3.38-1.18,5.58-2.64,7.78h18.93c-1.46-2.05-2.64-4.4-2.64-7.63v-59.31h14.25v-3.24h-14.25v-11.59c0-.74-.14-1.47-.14-1.92,0-5.57,1.32-9.24,6.9-9.24,5.28,0,9.25,3.22,12.33,7.04v.15c.29.44.44.59.59.59l-.15-.89Z"/>
+                            </g>
+                            <g>
+                                <g>
+                                    <path class="cls-1" d="M84.54,176.62c0,16.74-14.53,31.42-37.88,31.42-20.4,0-34.21-11.16-38.02-23.19l5.43-12.93c2.93,13.22,14.98,31.86,33.77,31.86,8.08,0,23.34-6.6,23.34-18.64,0-7.49-2.2-16.01-23.34-24.67-26.57-10.86-33.77-17.47-33.77-29.8,0-16.45,12.77-31.13,33.77-31.13,8.02,0,14.53,1.34,19.98,3.61.72.29,1.42.61,2.11.94,5.89,2.85,10.5,6.82,14.47,11.31l-3.38,14.97-2.64-4.69c-5.88-10.28-12.77-22.32-30.54-22.32-9.84,0-21.14,6.17-21.14,19.82,0,12.48,9.54,16.59,19.67,21l4.7,2.05c23.34,10.72,33.47,16.45,33.47,30.39Z"/>
+                                    <path class="cls-2" d="M83.49,135.95v3.24h1.82l.73-3.24h-2.55Z"/>
+                                </g>
+                                <path class="cls-1" d="M119.9,201.14c-1.91,1.18-4.1,1.91-6.6,1.91-7.19,0-6.76-6.31-6.76-11.6v-52.26h14.25v-3.24h-14.25v-17.32l-16.29,5.14c1.46,2.2,2.64,4.4,2.64,7.78v4.4h-9.4v3.24h9.4v46.54c0,12.77,6.16,20.11,19.82,20.11,2.79,0,6.31-1.03,8.37-2.64l-1.18-2.06Z"/>
+                                <path class="cls-1" d="M202.01,196.15v-60.63h-18.21c2.5,2.49,4.41,4.84,4.41,8.66v30.97c0,22.47-13.96,29.37-22.03,29.37-9.98,0-10.86-10.72-10.86-19.97v-49.03h-18.21c2.21,1.61,4.41,4.1,4.41,7.48v37.44c0,15.56,4.84,27.6,25.25,27.6,12.62,0,21.73-13.07,21.73-19.23v5.28c0,6.9,4.7,11.6,11.59,11.6h6.32c-4.11-3.08-4.4-7.48-4.4-9.54Z"/>
+                                <path class="cls-1" d="M290.58,196.29v-80.45c0-5.14.89-10.57,3.53-13.8h-5.73c-6.9,0-11.45,4.55-11.45,11.45v36.41c-3.38-6.32-11.6-16.73-23.34-16.73-21.44,0-32.45,16.44-32.45,36.85s11.89,37.73,32.45,37.73c10.86,0,18.93-4.55,23.34-12.19v2.5c0,4.69,3.08,7.78,7.78,7.78h10.28c-3.82-2.79-4.41-6.17-4.41-9.55ZM277.37,182.2c-2.35,16.15-11.16,21.29-21.29,21.29-12.63,0-20.85-18.06-20.85-33.33s8.08-30.68,21.29-30.68c9.69,0,18.5,8.22,20.85,22.17v20.55Z"/>
+                                <path class="cls-1" d="M320.73,110.26c-4.41,0-8.08,3.67-8.08,8.22s3.67,8.07,8.08,8.07,8.22-3.67,8.22-8.07-3.67-8.22-8.22-8.22ZM311.33,205.84h18.94c-1.46-2.2-2.64-4.85-2.64-8.08v-62.54h-17.77c3.09,2.35,4.12,6.16,4.12,11.01v51.24c0,3.38-1.18,6.02-2.65,8.37Z"/>
+                                <path class="cls-1" d="M379.74,133.02c-21.14,0-36.12,16-36.12,37.43s14.98,37.59,36.12,37.59,36.12-16,36.12-37.59-14.97-37.43-36.12-37.43ZM387.23,204.37c-19.23,0-32.45-28.92-32.45-45.96,0-11.3,5.88-21.72,17.47-21.72,19.24,0,32.45,28.92,32.45,45.95,0,11.3-5.87,21.73-17.47,21.73Z"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+            
+            <!-- Center Navigation Links -->
+            <div class="hidden lg:flex items-center gap-10">
+                <a class="text-font-inter text-sm font-semibold tracking-wider text-text-cyber hover:text-white transition-colors duration-200 uppercase" href="#services">Services</a>
+                <a class="text-font-inter text-sm font-semibold tracking-wider text-text-cyber hover:text-white transition-colors duration-200 uppercase" href="#works">Works</a>
+                <a class="text-font-inter text-sm font-semibold tracking-wider text-text-cyber hover:text-white transition-colors duration-200 uppercase" href="#automations">AI Workflows</a>
+                <a class="text-font-inter text-sm font-semibold tracking-wider text-text-cyber hover:text-white transition-colors duration-200 uppercase" href="#why-us">Why Us</a>
+                <a class="text-font-inter text-sm font-semibold tracking-wider text-text-cyber hover:text-white transition-colors duration-200 uppercase" href="#faqs">FAQs</a>
+            </div>
+            
+            <!-- Right CTA Button -->
+            <div>
+                <a href="#contact" class="scroll-to-contact bg-tertiary text-bg-zinc hover:bg-white border border-transparent hover:border-white px-6 py-2.5 rounded-full text-font-inter text-xs font-bold tracking-widest transition-all duration-300 shadow-[0_0_15px_rgba(13,148,136,0.3)]">
+                    START PROJECT
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Grid and Glows -->
+    <div class="bg-grid"></div>
+    <div id="bg-glow-teal" class="glow-bg glow-teal animate-pulse-slow" style="top: -10%; left: -10%; width: 600px; height: 600px;"></div>
+    <div id="bg-glow-indigo" class="glow-bg glow-indigo animate-pulse-slow" style="bottom: 10%; right: 10%; width: 700px; height: 700px; animation-delay: 2s;"></div>
+
+    <!-- Main Container -->
+    <main class="relative z-10 w-full overflow-hidden">
+        
+        <!-- SECTION 1: HERO SECTION -->
+        <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6 max-w-container-max mx-auto overflow-hidden">
+            <!-- Arabic calligraphy texture watermark -->
+            <div class="arabic-texture select-none" style="right: -5%; top: 12%">حروف</div>
+            
+            <div class="relative z-10 text-center max-w-4xl flex flex-col items-center">
+                <!-- Glowing Badge -->
+                <div class="mb-8 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center gap-2 animate-fade-in">
+                    <span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+                    <span class="text-font-inter text-xs text-on-surface-variant font-bold tracking-[0.2em] uppercase">IMPOSSIBLE TO IGNORE</span>
+                </div>
+                
+                <!-- Headline -->
+                <h1 class="text-font-jakarta text-display-lg text-4xl sm:text-6xl md:text-[72px] text-white font-extrabold tracking-tight leading-[1.05] mb-8">
+                    Making Brands <span class="bg-gradient-to-r from-tertiary via-primary to-secondary bg-clip-text text-transparent">Impossible</span> to Ignore and Effortless to Run.
+                </h1>
+                
+                <!-- Subheadline -->
+                <p class="text-font-dm text-lg md:text-xl text-text-cyber max-w-3xl leading-relaxed mb-10">
+                    We are a high-craft creative studio bridging cutting-edge digital experiences with autonomous operations. From Riyadh to London, we design premium websites, build custom AI systems, and script luxurious Arabic calligraphy marks.
+                </p>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-5 items-center justify-center">
+                    <a href="#contact" class="scroll-to-contact px-8 py-4 bg-[linear-gradient(135deg,#6366F1_0%,#A855F7_100%)] text-white rounded-full text-font-jakarta text-base font-bold transition-all duration-300 hover:shadow-[0_0_35px_rgba(99,102,241,0.5)] hover:scale-[1.03] active:scale-95">
+                        Launch Project Builder
+                    </a>
+                    <a href="#works" class="px-8 py-4 border border-white/10 text-white hover:bg-white/5 rounded-full text-font-jakarta text-base font-semibold transition-colors duration-200">
+                        View Editorial Showcase
+                    </a>
+                </div>
+            </div>
+
+            <!-- Floating UI Cards (Aesthetics & Interactions) -->
+            <div class="absolute inset-0 pointer-events-none hidden xl:block">
+                <!-- Floating Widget 1: Artistic Design -->
+                <div class="absolute top-[28%] left-[8%] animate-float" data-tilt>
+                    <div class="glass-card p-4 rounded-xl flex items-center gap-4 pointer-events-auto cursor-pointer max-w-[240px]">
+                        <div class="w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center border border-tertiary/40">
+                            <span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">design_services</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-font-inter text-xs text-white font-bold uppercase tracking-wider">Fine Art UI</span>
+                            <span class="text-[10px] text-text-cyber">Refining layouts...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Widget 2: Calligraphy Branding -->
+                <div class="absolute bottom-[24%] left-[10%] animate-float-delayed" data-tilt>
+                    <div class="glass-card p-4 rounded-xl flex items-center gap-4 pointer-events-auto cursor-pointer max-w-[260px]">
+                        <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center border border-secondary/40">
+                            <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">brush</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-font-inter text-xs text-white font-bold uppercase tracking-wider">Arabic branding</span>
+                            <span class="text-[10px] text-text-cyber">Vectorizing calligraphy...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Widget 3: AI Automation -->
+                <div class="absolute top-[32%] right-[8%] animate-float-delayed" data-tilt>
+                    <div class="glass-card p-4 rounded-xl flex flex-col gap-2 pointer-events-auto cursor-pointer min-w-[200px]">
+                        <div class="flex justify-between items-center">
+                            <span class="text-font-inter text-xs text-white font-bold uppercase tracking-wider">AI Operations</span>
+                            <span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                        </div>
+                        <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-[82%]"></div>
+                        </div>
+                        <span class="text-[9px] text-text-cyber">Automating client proposals...</span>
+                    </div>
+                </div>
+
+                <!-- Floating Widget 4: Real-time Status -->
+                <div class="absolute bottom-[28%] right-[10%] animate-float" data-tilt>
+                    <div class="glass-card p-4 rounded-xl flex items-center gap-3 pointer-events-auto cursor-pointer">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                        <div class="flex flex-col">
+                            <span class="text-font-inter text-xs text-white font-bold">Sync Active</span>
+                            <span class="text-[10px] text-text-cyber">Dubai - London Hubs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SERVICES SECTION -->
+        <section id="services" class="py-24 px-6 max-w-container-max mx-auto relative z-10 reveal">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-font-inter text-xs text-tertiary font-bold tracking-[0.25em] uppercase block mb-3">Our Offerings</span>
+                <h2 class="text-font-jakarta text-3xl md:text-5xl text-white font-extrabold tracking-tight leading-tight">
+                    The Modern Creative Ecosystem
+                </h2>
+                <div class="w-20 h-1 bg-[linear-gradient(to_right,var(--color-tertiary),var(--color-primary))] mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1: Web Design & Dev -->
+                <div class="glass-card card-hover-glow p-8 rounded-2xl flex flex-col justify-between" data-tilt>
+                    <div>
+                        <div class="w-14 h-14 bg-tertiary/10 border border-tertiary/20 text-tertiary rounded-xl flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-[32px]">space_dashboard</span>
+                        </div>
+                        <h3 class="text-font-jakarta text-2xl text-white font-bold mb-4">Artistic Web Design &amp; Development</h3>
+                        <p class="text-font-dm text-text-cyber leading-relaxed mb-6">
+                            Tailored layouts that break templates. We build fast, responsive, editorial-grade websites with smooth interactions, custom graphics, and robust backends (Vite/Next.js/React).
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-white/5 flex items-center justify-between">
+                        <span class="text-font-inter text-xs font-semibold text-white tracking-widest uppercase">Editorial-Grade</span>
+                        <a href="#contact" class="scroll-to-contact text-tertiary flex items-center gap-1 hover:gap-2 transition-all font-semibold text-sm">
+                            Build site <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: AI Workflows -->
+                <div class="glass-card card-hover-glow p-8 rounded-2xl flex flex-col justify-between" data-tilt>
+                    <div>
+                        <div class="w-14 h-14 bg-primary/10 border border-primary/20 text-primary rounded-xl flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-[32px]">memory</span>
+                        </div>
+                        <h3 class="text-font-jakarta text-2xl text-white font-bold mb-4">AI Automation Systems</h3>
+                        <p class="text-font-dm text-text-cyber leading-relaxed mb-6">
+                            We eliminate repetitive admin. We construct automated workflows that capture leads, draft proposals, synchronize databases, and update CRM records without touching code.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-white/5 flex items-center justify-between">
+                        <span class="text-font-inter text-xs font-semibold text-white tracking-widest uppercase">Autonomous</span>
+                        <a href="#automations" class="text-primary flex items-center gap-1 hover:gap-2 transition-all font-semibold text-sm">
+                            See breakdown <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Arabic/Persian Calligraphy -->
+                <div class="glass-card card-hover-glow p-8 rounded-2xl flex flex-col justify-between" data-tilt>
+                    <div>
+                        <div class="w-14 h-14 bg-secondary/10 border border-secondary/20 text-secondary rounded-xl flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-[32px]">edit_note</span>
+                        </div>
+                        <h3 class="text-font-jakarta text-2xl text-white font-bold mb-4">Arabic &amp; Persian Calligraphy Branding</h3>
+                        <p class="text-font-dm text-text-cyber leading-relaxed mb-6">
+                            Luxury branding with deep cultural roots. Traditional hand-sketched calligraphy digitized into scalable vector glyphs for identities that command authority in Western and Middle Eastern markets.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-white/5 flex items-center justify-between">
+                        <span class="text-font-inter text-xs font-semibold text-white tracking-widest uppercase">Hand-Sketched</span>
+                        <a href="#contact" class="scroll-to-contact text-secondary flex items-center gap-1 hover:gap-2 transition-all font-semibold text-sm">
+                            Create identity <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WORKS SECTION -->
+        <section id="works" class="py-24 px-6 max-w-container-max mx-auto relative z-10 reveal">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-font-inter text-xs text-secondary font-bold tracking-[0.25em] uppercase block mb-3">Featured Works</span>
+                    <h2 class="text-font-jakarta text-3xl md:text-5xl text-white font-extrabold tracking-tight">
+                        Proof in the Craft
+                    </h2>
+                </div>
+                <p class="text-font-dm text-text-cyber max-w-sm mt-4 md:mt-0 leading-relaxed">
+                    Skeletal representation of our portfolio. Pure typography, bespoke grids, and premium executions speak louder than claims.
+                </p>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel border border-white/5 transition-all duration-300 hover:border-tertiary/30">
+                    <!-- Empty Image Card / Abstract Graphic -->
+                    <div class="aspect-[4/3] bg-gradient-to-br from-zinc-900 to-zinc-950 flex items-center justify-center p-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(13,148,136,0.1),transparent_70%)]"></div>
+                        <span class="text-font-jakarta text-8xl font-black text-white/5 group-hover:scale-105 transition-transform duration-700">01</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-font-inter text-[10px] font-bold tracking-widest text-tertiary uppercase bg-tertiary/10 px-2.5 py-1 rounded">Web &amp; Identity</span>
+                            <span class="text-font-inter text-xs text-text-cyber font-medium">Dubai, UAE</span>
+                        </div>
+                        <h4 class="text-font-jakarta text-xl font-bold text-white group-hover:text-tertiary transition-colors duration-300">Al-Noor Real Estate</h4>
+                        <p class="text-font-dm text-xs text-text-cyber">Artistic bilingual real estate portal targeting high-net-worth buyers.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel border border-white/5 transition-all duration-300 hover:border-primary/30">
+                    <!-- Empty Image Card / Abstract Graphic -->
+                    <div class="aspect-[4/3] bg-gradient-to-br from-zinc-900 to-zinc-950 flex items-center justify-center p-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_70%)]"></div>
+                        <span class="text-font-jakarta text-8xl font-black text-white/5 group-hover:scale-105 transition-transform duration-700">02</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-font-inter text-[10px] font-bold tracking-widest text-primary uppercase bg-primary/10 px-2.5 py-1 rounded">AI Operations</span>
+                            <span class="text-font-inter text-xs text-text-cyber font-medium">London, UK</span>
+                        </div>
+                        <h4 class="text-font-jakarta text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">Apex Ventures Bot</h4>
+                        <p class="text-font-dm text-xs text-text-cyber">Autonomous email classifier and draft agent connecting Airtable to Gmail.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative rounded-2xl overflow-hidden glass-panel border border-white/5 transition-all duration-300 hover:border-secondary/30">
+                    <!-- Empty Image Card / Abstract Graphic -->
+                    <div class="aspect-[4/3] bg-gradient-to-br from-zinc-900 to-zinc-950 flex items-center justify-center p-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),transparent_70%)]"></div>
+                        <span class="text-font-jakarta text-8xl font-black text-white/5 group-hover:scale-105 transition-transform duration-700">03</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-font-inter text-[10px] font-bold tracking-widest text-secondary uppercase bg-secondary/10 px-2.5 py-1 rounded">Branding</span>
+                            <span class="text-font-inter text-xs text-text-cyber font-medium">Riyadh, KSA</span>
+                        </div>
+                        <h4 class="text-font-jakarta text-xl font-bold text-white group-hover:text-secondary transition-colors duration-300">Qalam Custom Font</h4>
+                        <p class="text-font-dm text-xs text-text-cyber">Luxury calligraphic typeface developed for premium packaging branding.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: AI AUTOMATION TYPES & BREAKDOWN -->
+        <section id="automations" class="py-24 px-6 max-w-container-max mx-auto relative z-10 reveal">
+            <div class="arabic-texture select-none" style="left: -5%; bottom: 10%">بداية</div>
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-font-inter text-xs text-tertiary font-bold tracking-[0.25em] uppercase block mb-3">Workflows Deconstructed</span>
+                <h2 class="text-font-jakarta text-3xl md:text-5xl text-white font-extrabold tracking-tight">
+                    How We Automate Operations
+                </h2>
+                <p class="text-font-dm text-text-cyber mt-4 leading-relaxed">
+                    AI isn't just about chat windows. We link databases, triggers, and LLMs into bulletproof pipelines. Here are three typical systems we build.
+                </p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 max-w-2xl mx-auto">
+                <button data-target="onboarding" class="auto-tab flex-1 min-w-[150px] px-6 py-4 rounded-xl border border-tertiary text-tertiary bg-tertiary/10 text-font-inter text-sm font-semibold tracking-wider uppercase transition-all duration-300">
+                    Client Onboarding
+                </button>
+                <button data-target="localization" class="auto-tab flex-1 min-w-[150px] px-6 py-4 rounded-xl border border-white/10 text-on-surface-variant text-font-inter text-sm font-semibold tracking-wider uppercase transition-all duration-300">
+                    Content Transcreation
+                </button>
+                <button data-target="ops-sync" class="auto-tab flex-1 min-w-[150px] px-6 py-4 rounded-xl border border-white/10 text-on-surface-variant text-font-inter text-sm font-semibold tracking-wider uppercase transition-all duration-300">
+                    Operations Sync
+                </button>
+            </div>
+
+            <!-- Tabs Content -->
+            <div class="glass-panel rounded-2xl p-8 md:p-12 max-w-4xl mx-auto border border-white/5 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full filter blur-xl pointer-events-none"></div>
+
+                <!-- Onboarding Detail -->
+                <div id="onboarding" class="auto-detail flex flex-col md:flex-row gap-8 items-start">
+                    <div class="flex-1 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center font-bold text-xs">01</span>
+                            <h3 class="text-font-jakarta text-2xl text-white font-bold">Autonomous Client Onboarding</h3>
+                        </div>
+                        <p class="text-font-dm text-text-cyber leading-relaxed">
+                            Say goodbye to manually sending contracts, scheduling links, and creating channels. We construct a trigger that hooks directly into your lead forms.
+                        </p>
+                        <ul class="space-y-3 font-body-md text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Evaluates project scope with AI to identify budget match.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Creates customized contracts via Pandadoc or HelloSign API.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Launches a private Slack channel and invites the client.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-80 glass-card p-6 rounded-xl border border-white/10 space-y-4">
+                        <span class="text-font-inter text-[10px] font-bold tracking-widest text-primary uppercase">Flow Execution</span>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-2.5 rounded bg-zinc-900 border border-white/5 text-xs">
+                                <span>Form Submission</span>
+                                <span class="text-emerald-400 font-bold uppercase text-[9px] tracking-wider">Trigger</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2.5 rounded bg-zinc-900 border border-white/5 text-xs">
+                                <span>Draft Proposal Generation</span>
+                                <span class="text-primary font-bold uppercase text-[9px] tracking-wider">GPT-4 Action</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2.5 rounded bg-zinc-900 border border-white/5 text-xs">
+                                <span>Slack Channel Setup</span>
+                                <span class="text-tertiary font-bold uppercase text-[9px] tracking-wider">API Sync</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Localization Detail -->
+                <div id="localization" class="auto-detail hidden flex-col md:flex-row gap-8 items-start">
+                    <div class="flex-1 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center font-bold text-xs">02</span>
+                            <h3 class="text-font-jakarta text-2xl text-white font-bold">Bilingual Content Transcreation</h3>
+                        </div>
+                        <p class="text-font-dm text-text-cyber leading-relaxed">
+                            Publish once, reach both worlds. We design an intelligent pipeline that adapts Western messaging into contextually authentic Arabic/Persian scripts, matching cultural nuance.
+                        </p>
+                        <ul class="space-y-3 font-body-md text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Analyzes tone and intent of original English document.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Re-drafts cultural idioms (not literal translation).
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Directly posts to headless Webflow/Sanity CMS structures.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-80 glass-card p-6 rounded-xl border border-white/10 space-y-4">
+                        <span class="text-font-inter text-[10px] font-bold tracking-widest text-primary uppercase">Nuance Verification</span>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-2.5 rounded bg-zinc-900 border border-white/5 text-xs">
+                                <span>English Context</span>
+                                <span class="text-text-cyber text-[10px]">"Disrupting markets"</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2.5 rounded bg-zinc-900 border border-white/5 text-xs">
+                                <span>Literal translation</span>
+                                <span class="text-red-400 text-[10px]">تعطيل الأسواق (Negative)</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2.5 rounded bg-zinc-900 border border-white/5 text-xs">
+                                <span>AI Transcreation</span>
+                                <span class="text-emerald-400 text-[10px] font-semibold">إحداث نقلة نوعية (Positive)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operations Sync Detail -->
+                <div id="ops-sync" class="auto-detail hidden flex-col md:flex-row gap-8 items-start">
+                    <div class="flex-1 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center font-bold text-xs">03</span>
+                            <h3 class="text-font-jakarta text-2xl text-white font-bold">Autonomous Operations Sync</h3>
+                        </div>
+                        <p class="text-font-dm text-text-cyber leading-relaxed">
+                            Synchronize lead generation, CRM pipelines, financial ledgers, and developer sprints seamlessly. Keep Airtable, Stripe, HubSpot, and GitHub connected.
+                        </p>
+                        <ul class="space-y-3 font-body-md text-sm text-on-surface-variant">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Cross-syncs closed deals from HubSpot into QuickBooks invoices.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Updates client client dashboards when developers push to GitHub.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Instantly reports financial health reports straight to Slack.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-80 glass-card p-6 rounded-xl border border-white/10 space-y-4">
+                        <span class="text-font-inter text-[10px] font-bold tracking-widest text-primary uppercase">Ecosystem Health</span>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center text-xs">
+                                <span>HubSpot Pipeline</span>
+                                <span class="text-emerald-400 font-bold uppercase text-[9px]">Synced</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs">
+                                <span>QuickBooks Ledger</span>
+                                <span class="text-emerald-400 font-bold uppercase text-[9px]">Updated</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs">
+                                <span>Slack Analytics</span>
+                                <span class="text-emerald-400 font-bold uppercase text-[9px]">Pushed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 5: WHY CHOOSE US (MANIFESTO) -->
+        <section id="why-us" class="py-24 px-6 max-w-container-max mx-auto relative z-10 reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content: Manifesto -->
+                <div class="lg:col-span-6 space-y-8">
+                    <span class="text-font-inter text-xs text-primary font-bold tracking-[0.25em] uppercase block">Our Manifesto</span>
+                    <h2 class="text-font-jakarta text-3xl md:text-5xl text-white font-extrabold tracking-tight leading-tight">
+                        No Legacy Overhead. <br/>Just Premium Digital Craft.
+                    </h2>
+                    <p class="text-font-dm text-text-cyber leading-relaxed">
+                        We are a young, lean creative studio. We don't hide behind layers of junior account executives, fancy office leases, or inflated social proof. We win on pure execution, extreme technical skill, and cultural resonance.
+                    </p>
+                    
+                    <div class="space-y-6 pt-4">
+                        <!-- Point 1 -->
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary text-lg">workspace_premium</span>
+                            </div>
+                            <div>
+                                <h4 class="text-font-jakarta text-lg text-white font-semibold mb-1">Craftsmanship First</h4>
+                                <p class="text-font-dm text-sm text-text-cyber">We write clean code, design bespoke typography, and sketch our own Arabic calligraphy mark by mark. We do not recycle templates.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 2 -->
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary text-lg">menu_book</span>
+                            </div>
+                            <div>
+                                <h4 class="text-font-jakarta text-lg text-white font-semibold mb-1">Direct to Founder Communication</h4>
+                                <p class="text-font-dm text-sm text-text-cyber">You work directly with the designers and automation engineers. No phone tags, no misaligned project specs.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 3 -->
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-primary text-lg">language</span>
+                            </div>
+                            <div>
+                                <h4 class="text-font-jakarta text-lg text-white font-semibold mb-1">Transnational Competency</h4>
+                                <p class="text-font-dm text-sm text-text-cyber">We bridge Western design structures (US, UK, Canada) with deep Middle Eastern aesthetic traditions (UAE, KSA, Qatar) flawlessly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content: Interactive Process Timeline -->
+                <div class="lg:col-span-6 z-10">
+                    <div class="glass-panel p-8 md:p-10 rounded-2xl space-y-8 relative">
+                        <div class="absolute left-12 top-10 bottom-10 w-px bg-white/10"></div>
+                        
+                        <!-- Step 1 -->
+                        <div class="flex gap-6 items-start relative">
+                            <div class="w-8 h-8 rounded-full bg-bg-zinc border-2 border-tertiary flex items-center justify-center font-bold text-xs text-tertiary z-10">
+                                01
+                            </div>
+                            <div>
+                                <h3 class="text-font-jakarta text-xl text-white font-bold mb-1">Discovery Blueprint</h3>
+                                <p class="text-font-dm text-sm text-text-cyber">We schedule a 15-minute strategy call to align on your goals, budgets, and operational roadblocks.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="flex gap-6 items-start relative">
+                            <div class="w-8 h-8 rounded-full bg-bg-zinc border-2 border-white/20 flex items-center justify-center font-bold text-xs text-on-surface-variant z-10">
+                                02
+                            </div>
+                            <div>
+                                <h3 class="text-font-jakarta text-xl text-white font-bold mb-1">Transparent Proposals</h3>
+                                <p class="text-font-dm text-sm text-text-cyber">Within 48 hours, you receive an itemized proposal breaking down exactly what will be built, with zero hidden markups.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flex gap-6 items-start relative">
+                            <div class="w-8 h-8 rounded-full bg-bg-zinc border-2 border-white/20 flex items-center justify-center font-bold text-xs text-on-surface-variant z-10">
+                                03
+                            </div>
+                            <div>
+                                <h3 class="text-font-jakarta text-xl text-white font-bold mb-1">Weekly Sprints &amp; Deploy</h3>
+                                <p class="text-font-dm text-sm text-text-cyber">No radio silence. We launch the project in sprints, giving you direct access to test builds and final code pushes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: FAQS -->
+        <section id="faqs" class="py-24 px-6 max-w-4xl mx-auto relative z-10 reveal">
+            <div class="text-center mb-16">
+                <span class="text-font-inter text-xs text-tertiary font-bold tracking-[0.25em] uppercase block mb-3">Got Questions?</span>
+                <h2 class="text-font-jakarta text-3xl md:text-5xl text-white font-extrabold tracking-tight">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+
+            <!-- FAQ List -->
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item glass-card rounded-xl overflow-hidden border border-white/5">
+                    <button class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left transition-colors hover:bg-white/5">
+                        <span class="text-font-jakarta text-base md:text-lg text-white font-bold">Why should I trust a young studio with high-end projects?</span>
+                        <span class="faq-icon material-symbols-outlined text-text-cyber transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white/[0.01]">
+                        <p class="px-6 pb-6 pt-2 text-font-dm text-sm md:text-base text-text-cyber leading-relaxed">
+                            Because we don't have layers of junior developers executing your work while partners take the credit. Every line of code, every automation workflow, and every calligraphy stroke is handled directly by the studio founders. We work with the latest technologies (Next.js, automated trigger logic, vector calligraphy brushes) to deliver products faster and with greater detail than bloated agencies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item glass-card rounded-xl overflow-hidden border border-white/5">
+                    <button class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left transition-colors hover:bg-white/5">
+                        <span class="text-font-jakarta text-base md:text-lg text-white font-bold">What regions do you serve and how do you handle timezones?</span>
+                        <span class="faq-icon material-symbols-outlined text-text-cyber transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white/[0.01]">
+                        <p class="px-6 pb-6 pt-2 text-font-dm text-sm md:text-base text-text-cyber leading-relaxed">
+                            We support founders and companies in the Middle East (UAE, KSA, Qatar) as well as the US, UK, and Canada. We utilize asynchronous communication tools (Slack updates, recorded Loom walkthroughs, and client hubs) to make project tracking seamless, no matter where you are based.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item glass-card rounded-xl overflow-hidden border border-white/5">
+                    <button class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left transition-colors hover:bg-white/5">
+                        <span class="text-font-jakarta text-base md:text-lg text-white font-bold">Can you design custom Arabic or Persian typography for our brand?</span>
+                        <span class="faq-icon material-symbols-outlined text-text-cyber transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white/[0.01]">
+                        <p class="px-6 pb-6 pt-2 text-font-dm text-sm md:text-base text-text-cyber leading-relaxed">
+                            Yes. We script Arabic and Persian typography by hand, adhering strictly to traditional proportions. We then digitize and vectorize the glyphs in Illustrator to provide high-resolution luxury logo marks, header textures, and marketing materials.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item glass-card rounded-xl overflow-hidden border border-white/5">
+                    <button class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left transition-colors hover:bg-white/5">
+                        <span class="text-font-jakarta text-base md:text-lg text-white font-bold">How long does a typical project take?</span>
+                        <span class="faq-icon material-symbols-outlined text-text-cyber transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white/[0.01]">
+                        <p class="px-6 pb-6 pt-2 text-font-dm text-sm md:text-base text-text-cyber leading-relaxed">
+                            A custom brand and website deployment generally spans 4-6 weeks. Custom automation pipelines can take 2-4 weeks, depending on the complexity of your CRM, triggers, and third-party integrations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: INTERACTIVE CONTACT PROJECT BUILDER -->
+        <section id="contact" class="py-24 px-6 max-w-container-max mx-auto relative z-10 reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative items-start">
+                
+                <!-- Left Column: Form Details & Info -->
+                <div class="lg:col-span-5 space-y-10">
+                    <div class="space-y-6">
+                        <span class="text-font-inter text-xs text-tertiary font-bold tracking-[0.25em] uppercase block">Start a Project</span>
+                        <h2 class="text-font-jakarta text-3xl md:text-5xl text-white font-extrabold tracking-tight leading-tight">
+                            Let's build something <span class="text-primary italic font-serif">extraordinary.</span>
+                        </h2>
+                        <p class="text-font-dm text-text-cyber leading-relaxed max-w-md">
+                            Tell us what you want to build. Our project builder routes details directly to our founders to compile your customized operational roadmap.
+                        </p>
+                    </div>
+
+                    <!-- Direct Connect -->
+                    <div class="pt-6 border-t border-white/5 space-y-4">
+                        <span class="text-font-inter text-xs font-semibold text-text-cyber uppercase tracking-widest block">Direct Channels</span>
+                        <div class="flex flex-col sm:flex-row gap-6">
+                            <a class="flex items-center gap-2 text-white hover:text-tertiary transition-colors duration-200" href="mailto:hello@huroofstudio.com">
+                                <span class="material-symbols-outlined text-xl text-tertiary">mail</span>
+                                <span class="font-body-md underline underline-offset-4 decoration-white/10 hover:decoration-tertiary">hello@huroofstudio.com</span>
+                            </a>
+                            <a class="flex items-center gap-2 text-white hover:text-primary transition-colors duration-200" href="https://wa.me/1234567890" target="_blank">
+                                <span class="material-symbols-outlined text-xl text-primary">chat</span>
+                                <span class="font-body-md underline underline-offset-4 decoration-white/10 hover:decoration-primary">WhatsApp Studio</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-panel p-8 md:p-12 rounded-2xl shadow-2xl relative overflow-hidden border border-white/5">
+                        
+                        <!-- Progress Bar -->
+                        <div class="absolute top-0 left-0 w-full h-1 bg-white/5">
+                            <div class="h-full bg-gradient-to-r from-tertiary to-primary transition-all duration-500 ease-in-out" id="progress-bar" style="width: 33.33%"></div>
+                        </div>
+
+                        <form id="project-form" class="mt-4">
+                            
+                            <!-- Step 1: Select Services -->
+                            <div class="step-active step-transition" id="step-1">
+                                <div class="mb-8">
+                                    <span class="text-font-inter text-xs text-primary font-bold uppercase tracking-wider block mb-2">Step 01 / 03</span>
+                                    <h3 class="text-font-jakarta text-2xl text-white font-bold">What services do you need?</h3>
+                                    <p class="text-font-dm text-sm text-text-cyber mt-2">Select all options that align with your studio vision.</p>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                                    <label class="cursor-pointer group">
+                                        <input class="hidden peer" name="service" type="checkbox" value="web-design"/>
+                                        <div class="p-5 rounded-xl border border-white/5 bg-white/[0.02] text-text-cyber peer-checked:border-tertiary peer-checked:text-tertiary peer-checked:bg-tertiary/10 transition-all duration-300 hover:border-white/20 flex items-center gap-3">
+                                            <span class="material-symbols-outlined text-lg">language</span>
+                                            <span class="text-font-jakarta text-sm font-semibold">Web Design &amp; Dev</span>
+                                        </div>
+                                    </label>
+                                    <label class="cursor-pointer group">
+                                        <input class="hidden peer" name="service" type="checkbox" value="ai-automation"/>
+                                        <div class="p-5 rounded-xl border border-white/5 bg-white/[0.02] text-text-cyber peer-checked:border-primary peer-checked:text-primary peer-checked:bg-primary/10 transition-all duration-300 hover:border-white/20 flex items-center gap-3">
+                                            <span class="material-symbols-outlined text-lg">neurology</span>
+                                            <span class="text-font-jakarta text-sm font-semibold">AI Automation Systems</span>
+                                        </div>
+                                    </label>
+                                    <label class="cursor-pointer group">
+                                        <input class="hidden peer" name="service" type="checkbox" value="calligraphy"/>
+                                        <div class="p-5 rounded-xl border border-white/5 bg-white/[0.02] text-text-cyber peer-checked:border-secondary peer-checked:text-secondary peer-checked:bg-secondary/10 transition-all duration-300 hover:border-white/20 flex items-center gap-3">
+                                            <span class="material-symbols-outlined text-lg">edit_note</span>
+                                            <span class="text-font-jakarta text-sm font-semibold">Calligraphy Branding</span>
+                                        </div>
+                                    </label>
+                                    <label class="cursor-pointer group">
+                                        <input class="hidden peer" name="service" type="checkbox" value="branding"/>
+                                        <div class="p-5 rounded-xl border border-white/5 bg-white/[0.02] text-text-cyber peer-checked:border-primary peer-checked:text-primary peer-checked:bg-primary/10 transition-all duration-300 hover:border-white/20 flex items-center gap-3">
+                                            <span class="material-symbols-outlined text-lg">auto_awesome</span>
+                                            <span class="text-font-jakarta text-sm font-semibold">Brand Strategy</span>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <button class="w-full md:w-auto px-8 py-4 bg-tertiary hover:bg-white text-bg-zinc font-bold rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(13,148,136,0.2)]" onclick="goToStep(2)" type="button">
+                                    <span>Describe Your Project</span>
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                            </div>
+
+                            <!-- Step 2: Project Details -->
+                            <div class="step-hidden step-transition" id="step-2">
+                                <div class="mb-8">
+                                    <button class="text-text-cyber hover:text-white flex items-center gap-1 text-font-inter text-xs uppercase tracking-wider transition-colors mb-4" onclick="goToStep(1)" type="button">
+                                        <span class="material-symbols-outlined text-sm">arrow_back</span>
+                                        Back
+                                    </button>
+                                    <span class="text-font-inter text-xs text-primary font-bold uppercase tracking-wider block mb-2">Step 02 / 03</span>
+                                    <h3 class="text-font-jakarta text-2xl text-white font-bold">Tell us about you &amp; your goals</h3>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                    <div class="space-y-2">
+                                        <label class="text-font-inter text-xs text-text-cyber font-semibold uppercase tracking-wider">Full Name *</label>
+                                        <input id="client-name" class="w-full bg-zinc-950/80 border border-white/10 rounded-lg px-4 py-3 text-white focus:ring-1 focus:ring-tertiary focus:border-transparent outline-none transition-all text-sm" placeholder="John Doe" type="text" required/>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-font-inter text-xs text-text-cyber font-semibold uppercase tracking-wider">Work Email *</label>
+                                        <input id="client-email" class="w-full bg-zinc-950/80 border border-white/10 rounded-lg px-4 py-3 text-white focus:ring-1 focus:ring-tertiary focus:border-transparent outline-none transition-all text-sm" placeholder="john@company.com" type="email" required/>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-font-inter text-xs text-text-cyber font-semibold uppercase tracking-wider">Company Name</label>
+                                        <input id="client-company" class="w-full bg-zinc-950/80 border border-white/10 rounded-lg px-4 py-3 text-white focus:ring-1 focus:ring-tertiary focus:border-transparent outline-none transition-all text-sm" placeholder="Acme Corporation" type="text"/>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-font-inter text-xs text-text-cyber font-semibold uppercase tracking-wider">Estimated Budget *</label>
+                                        <select id="client-budget" class="w-full bg-zinc-950/80 border border-white/10 rounded-lg px-4 py-3 text-white focus:ring-1 focus:ring-tertiary focus:border-transparent outline-none transition-all text-sm appearance-none">
+                                            <option>$5k - $15k</option>
+                                            <option>$15k - $30k</option>
+                                            <option>$30k - $50k</option>
+                                            <option>$50k+</option>
+                                        </select>
+                                    </div>
+                                    <div class="md:col-span-2 space-y-2">
+                                        <label class="text-font-inter text-xs text-text-cyber font-semibold uppercase tracking-wider">Project Scope *</label>
+                                        <textarea id="project-desc" class="w-full bg-zinc-950/80 border border-white/10 rounded-lg px-4 py-3 text-white focus:ring-1 focus:ring-tertiary focus:border-transparent outline-none transition-all text-sm" placeholder="Describe your objectives, timeline, and any cultural styling requirements..." rows="4" required></textarea>
+                                    </div>
+                                </div>
+
+                                <button class="w-full md:w-auto px-8 py-4 bg-tertiary hover:bg-white text-bg-zinc font-bold rounded-full flex items-center justify-center gap-2 transition-all duration-300" onclick="goToStep(3)" type="button">
+                                    <span>Final Step</span>
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </button>
+                            </div>
+
+                            <!-- Step 3: Action Booking -->
+                            <div class="step-hidden step-transition" id="step-3">
+                                <div class="mb-8">
+                                    <button class="text-text-cyber hover:text-white flex items-center gap-1 text-font-inter text-xs uppercase tracking-wider transition-colors mb-4" onclick="goToStep(2)" type="button">
+                                        <span class="material-symbols-outlined text-sm">arrow_back</span>
+                                        Back
+                                    </button>
+                                    <span class="text-font-inter text-xs text-primary font-bold uppercase tracking-wider block mb-2">Step 03 / 03</span>
+                                    <h3 class="text-font-jakarta text-2xl text-white font-bold">Pick your preferred kickoff</h3>
+                                </div>
+
+                                <div class="space-y-6">
+                                    <!-- Cal.com Placeholder -->
+                                    <div class="p-6 border border-white/5 rounded-xl bg-bg-zinc text-center space-y-4">
+                                        <div class="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto border border-primary/20">
+                                            <span class="material-symbols-outlined text-lg">calendar_today</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-font-jakarta text-base text-white font-bold mb-1">Book a Discovery Strategy Call</h4>
+                                            <p class="text-font-dm text-xs text-text-cyber">Instantly sync a 15-minute briefing session with a founder.</p>
+                                        </div>
+                                        <!-- Mock Cal.com interactive scheduler widget -->
+                                        <div class="h-36 bg-zinc-950/80 border border-dashed border-white/10 rounded-lg flex flex-col items-center justify-center text-text-cyber italic text-xs gap-3">
+                                            <span class="material-symbols-outlined text-2xl animate-pulse">lock_open</span>
+                                            <span>Founder availability synced: Dubai &amp; London Hubs</span>
+                                        </div>
+                                        <button class="text-primary hover:text-white text-xs font-semibold underline transition-colors" type="button">Skip call, just send details</button>
+                                    </div>
+
+                                    <div class="relative">
+                                        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-white/5"></div></div>
+                                        <div class="relative flex justify-center text-[10px] uppercase tracking-widest"><span class="bg-surface-card px-4 text-text-cyber">or</span></div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button class="w-full bg-[linear-gradient(135deg,#6366F1_0%,#A855F7_100%)] text-white font-bold px-8 py-4 rounded-full flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(99,102,241,0.4)] transition-all duration-300" type="submit">
+                                        <span class="material-symbols-outlined text-sm">send</span>
+                                        <span>Submit Project Brief</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-card relative w-full border-t border-white/5 py-16 px-6 md:px-12 mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-container-max mx-auto mb-12">
+            <!-- Left Branding -->
+            <div class="md:col-span-5 space-y-6">
+                <a class="flex items-center gap-3" href="#hero">
+                    <svg class="huroof-logo w-auto h-8" id="Layer_2_footer" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424.5 208.04">
+                        <g id="Layer_1-2_footer" data-name="Layer 1">
+                            <g>
+                                <g>
+                                    <path class="cls-1" d="M84.12,6.6c0-2.49.89-4.7,2.06-6.6h-18.94c1.32,2.05,2.2,4.26,2.2,7.04v39.35H16.88V6.6c0-2.49.88-4.7,2.06-6.6H0c1.32,2.05,2.2,4.26,2.2,7.04v90c0,2.65-.88,5.15-2.2,7.05h18.94c-1.18-1.9-2.06-4.11-2.06-6.75v-45.51h52.56v45.4c4.78,1.89,8.69,4.31,11.93,6.86h4.81c-1.17-1.9-2.06-4.11-2.06-6.75V6.6ZM67.82,103.15c-.18.33-.37.64-.58.94h2.69c-.69-.33-1.39-.65-2.11-.94Z"/>
+                                    <path class="cls-1" d="M163.85,95.87v-60.63h-18.2c2.5,2.49,4.4,4.84,4.4,8.66v30.97c0,22.47-13.95,29.37-22.02,29.37-9.99,0-10.86-10.72-10.86-19.97v-49.03h-18.21c2.2,1.61,4.4,4.1,4.4,7.48v37.44c0,15.56,4.85,27.6,25.26,27.6,12.62,0,21.73-13.06,21.73-19.23v5.29c0,6.89,4.69,11.59,11.59,11.59h6.32c-4.11-3.08-4.41-7.48-4.41-9.54Z"/>
+                                    <path class="cls-1" d="M218.14,33.77c-7.35,0-16.89,3.96-21.58,17.76,0-8.22,0-16.29-9.55-16.29h-7.34c1.47,1.46,3.82,4.1,3.82,8.07v54.18c0,3.22-1.03,5.87-2.35,8.07h18.94c-1.47-2.35-2.79-5.14-2.79-8.52v-34.93c0-13.22,7.49-20.42,14.39-20.42,4.26,0,8.66,2.8,11.01,7.2v-14.68c-.74-.15-2.64-.44-4.55-.44Z"/>
+                                    <path class="cls-1" d="M264,32.74c-21.14,0-36.12,16-36.12,37.44s14.98,37.58,36.12,37.58c2.74,0,5.37-.27,7.88-.78.36-1.06.83-2.05,1.38-2.98-.57.06-1.16.09-1.77.09-19.24,0-32.45-28.92-32.45-45.95,0-11.31,5.87-21.73,17.47-21.73,19.23,0,32.45,28.92,32.45,45.95,0,5.05-1.17,9.91-3.49,13.75.94-.13,1.91-.2,2.91-.2h2.65c5.75-6.6,9.08-15.54,9.08-25.73,0-21.44-14.97-37.44-36.11-37.44Z"/>
+                                    <path class="cls-1" d="M346.6,32.74c-21.15,0-36.13,16-36.13,37.44s14.98,37.58,36.13,37.58,36.11-16,36.11-37.58-14.97-37.44-36.11-37.44ZM354.08,104.09c-19.23,0-32.45-28.92-32.45-45.95,0-11.31,5.88-21.73,17.48-21.73,19.23,0,32.44,28.92,32.44,45.95,0,11.31-5.87,21.73-17.47,21.73Z"/>
+                                    <path class="cls-1" d="M424.35,19.52c-.88-7.04-6.02-12.33-12.33-12.33-13.66,0-20.85,7.34-20.85,20.12v8.07h-9.4v3.24h9.4v59.16c0,3.38-1.18,5.58-2.64,7.78h18.93c-1.46-2.05-2.64-4.4-2.64-7.63v-59.31h14.25v-3.24h-14.25v-11.59c0-.74-.14-1.47-.14-1.92,0-5.57,1.32-9.24,6.9-9.24,5.28,0,9.25,3.22,12.33,7.04v.15c.29.44.44.59.59.59l-.15-.89Z"/>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path class="cls-1" d="M84.54,176.62c0,16.74-14.53,31.42-37.88,31.42-20.4,0-34.21-11.16-38.02-23.19l5.43-12.93c2.93,13.22,14.98,31.86,33.77,31.86,8.08,0,23.34-6.6,23.34-18.64,0-7.49-2.2-16.01-23.34-24.67-26.57-10.86-33.77-17.47-33.77-29.8,0-16.45,12.77-31.13,33.77-31.13,8.02,0,14.53,1.34,19.98,3.61.72.29,1.42.61,2.11.94,5.89,2.85,10.5,6.82,14.47,11.31l-3.38,14.97-2.64-4.69c-5.88-10.28-12.77-22.32-30.54-22.32-9.84,0-21.14,6.17-21.14,19.82,0,12.48,9.54,16.59,19.67,21l4.7,2.05c23.34,10.72,33.47,16.45,33.47,30.39Z"/>
+                                        <path class="cls-2" d="M83.49,135.95v3.24h1.82l.73-3.24h-2.55Z"/>
+                                    </g>
+                                    <path class="cls-1" d="M119.9,201.14c-1.91,1.18-4.1,1.91-6.6,1.91-7.19,0-6.76-6.31-6.76-11.6v-52.26h14.25v-3.24h-14.25v-17.32l-16.29,5.14c1.46,2.2,2.64,4.4,2.64,7.78v4.4h-9.4v3.24h9.4v46.54c0,12.77,6.16,20.11,19.82,20.11,2.79,0,6.31-1.03,8.37-2.64l-1.18-2.06Z"/>
+                                    <path class="cls-1" d="M202.01,196.15v-60.63h-18.21c2.5,2.49,4.41,4.84,4.41,8.66v30.97c0,22.47-13.96,29.37-22.03,29.37-9.98,0-10.86-10.72-10.86-19.97v-49.03h-18.21c2.21,1.61,4.41,4.1,4.41,7.48v37.44c0,15.56,4.84,27.6,25.25,27.6,12.62,0,21.73-13.07,21.73-19.23v5.28c0,6.9,4.7,11.6,11.59,11.6h6.32c-4.11-3.08-4.4-7.48-4.4-9.54Z"/>
+                                    <path class="cls-1" d="M290.58,196.29v-80.45c0-5.14.89-10.57,3.53-13.8h-5.73c-6.9,0-11.45,4.55-11.45,11.45v36.41c-3.38-6.32-11.6-16.73-23.34-16.73-21.44,0-32.45,16.44-32.45,36.85s11.89,37.73,32.45,37.73c10.86,0,18.93-4.55,23.34-12.19v2.5c0,4.69,3.08,7.78,7.78,7.78h10.28c-3.82-2.79-4.41-6.17-4.41-9.55ZM277.37,182.2c-2.35,16.15-11.16,21.29-21.29,21.29-12.63,0-20.85-18.06-20.85-33.33s8.08-30.68,21.29-30.68c9.69,0,18.5,8.22,20.85,22.17v20.55Z"/>
+                                    <path class="cls-1" d="M320.73,110.26c-4.41,0-8.08,3.67-8.08,8.22s3.67,8.07,8.08,8.07,8.22-3.67,8.22-8.07-3.67-8.22-8.22-8.22ZM311.33,205.84h18.94c-1.46-2.2-2.64-4.85-2.64-8.08v-62.54h-17.77c3.09,2.35,4.12,6.16,4.12,11.01v51.24c0,3.38-1.18,6.02-2.65,8.37Z"/>
+                                    <path class="cls-1" d="M379.74,133.02c-21.14,0-36.12,16-36.12,37.43s14.98,37.59,36.12,37.59,36.12-16,36.12-37.59-14.97-37.43-36.12-37.43ZM387.23,204.37c-19.23,0-32.45-28.92-32.45-45.96,0-11.3,5.88-21.72,17.47-21.72,19.24,0,32.45,28.92,32.45,45.95,0,11.3-5.87,21.73-17.47,21.73Z"/>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <p class="text-font-dm text-sm text-text-cyber max-w-sm">
+                    Bespoke web design, autonomous operation systems, and cultural calligraphy branding. Serving visionaries globally.
+                </p>
+            </div>
+
+            <!-- Services Quick Links -->
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="text-font-inter text-xs font-bold text-white uppercase tracking-wider">Services</h4>
+                <ul class="space-y-2 text-sm text-text-cyber">
+                    <li><a class="hover:text-tertiary transition-colors" href="#services">Artistic Design &amp; Dev</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#automations">AI Automation Systems</a></li>
+                    <li><a class="hover:text-secondary transition-colors" href="#services">Calligraphy Branding</a></li>
+                </ul>
+            </div>
+
+            <!-- Studio Offices -->
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="text-font-inter text-xs font-bold text-white uppercase tracking-wider">Studio Hubs</h4>
+                <ul class="space-y-2 text-sm text-text-cyber">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Middle East Hub: Dubai &amp; Riyadh</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Western Hub: London &amp; New York</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Asynchronous Support: US, UK &amp; Canada</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-container-max mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-text-cyber gap-4">
+            <span>&copy; 2026 Huroof Studio. High-Craft Digital Artifacts.</span>
+            <div class="flex gap-6">
+                <a class="hover:underline" href="#">Privacy Blueprint</a>
+                <a class="hover:underline" href="#">Studio Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JS File -->
     <script src="script.js"></script>
 </body>
 </html>
